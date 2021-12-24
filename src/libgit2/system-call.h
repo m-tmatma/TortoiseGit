@@ -1,6 +1,6 @@
 ﻿// TortoiseGit - a Windows shell extension for easy version control
 
-// Copyright (C) 2014 TortoiseGit
+// Copyright (C) 2014, 2021 TortoiseGit
 
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -25,8 +25,8 @@ typedef struct {
 	HANDLE out;
 	HANDLE err;
 	bool running;
-	git_buf *outBuf;
-	git_buf *errBuf;
+	git_str *outBuf;
+	git_str *errBuf;
 	HANDLE asyncReadOutThread;
 	HANDLE asyncReadErrorThread;
 } COMMAND_HANDLE;
