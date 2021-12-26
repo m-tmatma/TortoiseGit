@@ -17,6 +17,7 @@ Released: unreleased
  * Fixed issue #3764: Add TortoiseGit menu to the right click menu in Windows 11
  * Fixed issue #3818: Change icon image for Cherry-Pick
  * Fixed issue #3728: Log Browser: Add an option to switch on full history (--full-history)
+ * Fixed issue #2562: Automatically track remote when pushing untracked branch
 
 == Bug Fixes ==
  * Fixed issue #3736: LFS force unlock not working
@@ -30,7 +31,7 @@ Released: unreleased
  * Fixed issue #3808: LFS stopped working (maybe related to major upgrade of git-lfs 3.x)
  * Fixed issue #3822: Crash (0xc0000409) in TortoiseGitProc.exe when invoking git log
  * Fixes issue #3826: Help links to TortoiseGit site don't open in a sensible browser
- * Fixed issue #3815: TortoiseGitMerge crashes on start when winrt libraries are installed
+ * Fixed issue #3815: TortoiseGitMerge crashes on Windows 7 on startup when winrt libraries are installed
 
 = Release 2.12.0 =
 Released: 2021-03-31
