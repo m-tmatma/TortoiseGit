@@ -426,6 +426,11 @@ int CGit::Run(CGitCall* pcall)
 {
 	PROCESS_INFORMATION pi;
 	CAutoGeneralHandle hRead, hReadErr;
+
+	CString temp;
+	temp = L"debug: " + pcall->GetCmd() + L"\n";
+	OutputDebugString(temp.GetString());
+
 	if (RunAsync(pcall->GetCmd(), &pi, hRead.GetPointer(), hReadErr.GetPointer()))
 		return TGIT_GIT_ERROR_CREATE_PROCESS;
 
@@ -511,6 +516,7 @@ int CGit::Run(CString cmd,BYTE_VECTOR *vector, BYTE_VECTOR *vectorErr)
 int CGit::Run(CString cmd, CString* output, int code)
 {
 	CString err;
+
 	int ret = Run(cmd, output, &err, code);
 
 	if (output && !err.IsEmpty())
